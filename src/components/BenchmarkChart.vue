@@ -11,11 +11,15 @@ export default defineComponent({
         option: {
             type: Object,
             required: true
+        },
+        height: {
+            type: String,
+            required: true
         }
     }
 })
 </script>
 
 <template>
-  <vue-echarts :option="option" style="height: 500px" ref="chart" />
+  <vue-echarts :option="option" :style="'height:' + height" ref="chart" />
 </template>
